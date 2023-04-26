@@ -12,9 +12,10 @@
 
             선택자:first-child
             선택자:last-child
-            선택자:nth-child(n)
-            선택자:nth-last-child(n)
+            선택자:nth-child(n) - 순번을 위에서 아래로
+            선택자:nth-last-child(n) - 순번을 아래에서 위로
             
+            수열
             n: 1,2,3,..., odd, even, 2n-1, 2n, 3n ...
             
             2n -> 2*1, 2*2, 2*3, ... -> 2, 4, 6, ...
@@ -23,25 +24,55 @@
             짝수: 2n 또는 even
             홀수: 2n-1 또는 odd
         */
+        p:first-child {
+            color: red;
+        }
+        p:nth-child(1) {
+            color: blue;
+        }
+        p:nth-child(2) {
+            color: blue;
+        }
+        p:nth-child(3n-1) {
+            color: blue;
+        }
 
+        /* 적용되지 않는다. */
+        p:last-child {
+            color: orange;
+        }
+        p:nth-last-child(1) {
+            color: aqua;
+        }
+
+        div p:nth-child(2) {background-color: yellow;}
     </style>
 </head>
 <body>
-    <h1>의사 클래스 선택자</h1>
-    <h2>~child</h2>
+    <h1>의사 클래스 선택자 - n번째 요소</h1>
     <div>
-        <p>1 번째 요소입니다.</p>
+        <h2>~child - 1번째 요소</h2>
         <p>2 번째 요소입니다.</p>
         <p>3 번째 요소입니다.</p>
         <p>4 번째 요소입니다.</p>
         <p>5 번째 요소입니다.</p>
-        <p>6 번째 요소입니다.</p>
-        <p>7 번째 요소입니다.</p>
-        <p>8 번째 요소입니다.</p>
-        <p>9 번째 요소입니다.</p>
-        <p>10 번째 요소입니다.</p>
-        <p>11 번째 요소입니다.</p>
-        <p>12 번째 요소입니다.</p>
     </div>
+
+    <div>
+        <h2>~child - 번째 요소</h2>
+        <p>2 번째 요소입니다.</p>
+        <p>3 번째 요소입니다.</p>
+        <p>4 번째 요소입니다.</p>
+        <p>5 번째 요소입니다.</p>
+    </div>
+
+    <div>
+        <h2>~child - 번째 요소</h2>
+        <p>n 번째 요소입니다.</p>
+        <p>n 번째 요소입니다.</p>
+        <p>n 번째 요소입니다.</p>
+        <p>n 번째 요소입니다.</p>
+    </div>
+    
 </body>
 </html>

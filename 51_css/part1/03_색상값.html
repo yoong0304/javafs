@@ -8,16 +8,62 @@
     <style>
         /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
 
+        /* 
+            2진수 : 0, 1
+            8진수 : 0 ~ 7
+            16진수 0 ~ 9 A ~ F
+            10진수 : 0 ~ 9
+        */
+
         /* HEX: 16진수 -> 0~9, A~F */
         /* #RRGGBB 또는 #RGB */
+        /* 
+            #00ffff - cyan
+        */
 
         /* rgb(0~255, 0~255, 0~255) */  
+        /* 
+            rgb(R,G,B)
+            rgb(0,0,0)
+            rgb(255,255,255)
+         */
 
         /* rgba(0~255, 0~255, 0~255, 0~1) */
+        /* 
+            rgba(R, G, B, alpha)
+            rgba(255, 0, 0, 1)
+            rgba(255, 0, 0, 0.5)
+        */
 
         /* hsl(0~359, 0~100%, 0~100%) */
-        
+        /* 
+            hsl(각도(0~359도), saturation, lightness)
+            hsl(hue, saturation, lightness)
+            hsl(0, 100%, 50%)
+        */
+
         /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /* 
+            hsl(hue, saturation, lightness, alpha)
+        */
+        /* 
+            카멜(낙타)케이스 colorName
+            스네이크 케이스 color_name
+            파스칼 케이스 ColorName
+        */
+        .colorName {color: red;}
+        .colorHex {color: #ff0000;}
+        .colorRgb {color: rgb(255, 0, 0);}
+        .colorRgba {color: rgba(255, 0, 0, 0.5);}
+        .colorHsl {color: hsl(0, 100%, 50%);}
+        .colorHsla {color: hsla(0, 100%, 50%, 0.5);}
+        /* p:first-of-type {color: red;}
+        p:nth-of-type() {color: #ff0000;}
+        .colorRgb {color: rgb(255, 0, 0);}
+        .colorRgba {color: rgba(255, 0, 0, 0.5);}
+        .colorHsl {color: hsl(0, 100%, 50%);}
+        .colorHsla {color: hsla(0, 100%, 50%, 0.5);} */
+
 
     </style>
 </head>
