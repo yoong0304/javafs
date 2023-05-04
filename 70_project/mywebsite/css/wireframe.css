@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* common(공통) */
+h2 {
+    height: 135px;
+    background: brown;
+}
+section > p { 
+    height: 54px;
+    background: darkgray;
+}
+/* 블록레벨요소의 가로 가운데 배치 margin: 0 auto;(반드시 width가 있어야한다. */
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background: darkkhaki;
+}
+
+/* header */
+nav {
+    height: 54px;
+    background: rebeccapurple;
+}
+/* section1 */
+#home {
+    height: 1053px;
+    background: rosybrown;
+}
+
+/* section2 */
+.num {
+    height: 135px;
+    background: darkgreen;
+}
+/* section3 */
+
+/* section4 */
+
+/* footer */

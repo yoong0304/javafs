@@ -56,17 +56,11 @@
         /* 한글은 한글 폰트로, 영문은 영문 폰트로 사용한다. */
         @font-face {
             font-family: aladdin;
-            src: url(../assets/font/aladdin.ttf);
+            src: url('font/aladdin.ttf');
         }    
-        @font-face {
-            font-family: 'SeoulNamsanM';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
-        }
         .ff2 {
             font-family: aladdin, 'Noto Sans KR', sans-serif;    
-        }
-        .ff3 {
-            font-family: 'SeoulNamsanM', sans-serif;
+            
         }
 
     </style>
@@ -76,10 +70,8 @@
     <h1>웹 폰트</h1>
     <p>구글 웹 폰트(Google Web Font) 지정 안함.</p>
     <p class="ff1">구글 웹 폰트(Google Web Font) 지정 했음.</p>
-    <p>알라딘 서체(Aladdin Font) 지정 안함.</p>
-    <p class="ff2">서울 서체(Seoul Font) 지정 했음.</p>
     <p>서울 서체(Seoul Font) 지정 안함.</p>
-    <p class="ff3">서울 서체(Seoul Font) 지정 했음.</p>
+    <p class="ff2">서울 서체(Seoul Font) 지정 했음.</p>
 </body>
 
 </html>
