@@ -79,8 +79,46 @@ header a:hover {
 }
 
 /* section2 */
+
+.container_about1, .container_about2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+.container_about1 h2 {
+    margin: 10px 0;
+}
+.container_about1 p {
+    margin: 15px 0;
+}
+.container_about2 p {
+    margin: 15px 0;
+}
+h3 {
+    border: 1px solid black;
+    text-align: center;
+    margin: 50px 0;
+}
+.container_img {
+    display: flex;
+    flex-direction: column;
+}
+.container_img b {
+    margin: 15px 0;
+}
+.container_img i {
+    margin-right: 10px;
+}
+.container_about2 {
+    flex-direction: row ;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
 /* section3 */
-#portfolio div {
+.portfolio_img {
     position: relative;
     background: url(../images/parallax2.jpg) no-repeat 50% 50%/ cover fixed;
     height: 500px;
@@ -94,6 +132,18 @@ header a:hover {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+#portfolio ul {
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+#portfolio li {
+    width: 24%;
+    height: 200px;
+}
+
 /* section4 */
 button {
     height: 90px;
