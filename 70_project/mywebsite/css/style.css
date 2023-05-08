@@ -27,10 +27,12 @@ body {
 /* a태그와 button태그 글자 색은 body태그의 글자 색을 상속 받지 않는다. */
 a {
     color: #333;
+    text-decoration: none;
 }
 
 img {
     width: 100%;
+    vertical-align: top;
 }
 
 /* header */
@@ -44,7 +46,7 @@ header ul {
     padding: 0 32px;
     /* background: #eeeeee; */
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
 }
 header li {
@@ -60,6 +62,8 @@ header a:hover {
 /* section1 */
 #home {
     position: relative;
+    background: url(../images/parallax1.jpg) no-repeat 50% 50%/ cover fixed;
+    height: 930px;
 }
 /* 요소를 부모 안에 정가운데 배치 */
 .logo {
@@ -76,6 +80,20 @@ header a:hover {
 
 /* section2 */
 /* section3 */
+#portfolio div {
+    position: relative;
+    background: url(../images/parallax2.jpg) no-repeat 50% 50%/ cover fixed;
+    height: 500px;
+}
+#portfolio b {
+    color: #000;
+    font-size: 25px;
+    letter-spacing: 1.5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 /* section4 */
 button {
     height: 90px;
