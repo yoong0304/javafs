@@ -7,7 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            관점의 기준
+            perspective-origin: x축 y축;
+            값을 하나만 쓰면 x축으로 적용되고, y축은 50%로 지정된다.
+
+            perspective-origin: 50% 50%;
+            단위: px, %
+            x축: left, right, center
+            y축: top, bottom, center
+        */
+
         .outer {
+            width: 200px;
             border: 1px solid black;
             /* perspective는 관점 속성으로 부모 요소에 지정한다. */
             perspective: 1000px;
@@ -25,33 +37,105 @@
         }
 
         /* 
-            transform: translate(x, y);
+            변환
+            1) 2D : x축, y축
+            2) 3D : x축, y축, z축
+
+            1) 이동 (translate)
+            2) 크기 (scale)
+            3) 회전 (rotate)
+            4) 기울임 (skew)
+
+            transform: translate(x위치, y위치);
+            transform: translateX(x위치);
+            transform: translateY(y위치);
+            transform: translateZ(z위치);
+            transform: translate3d(x위치, y위치, z위치);
+
             transform: scale(w, h);
+            transform: scaleX(w 너비);
+            transform: scaleY(h 높이);
+            transform: scaleZ(z 깊이);
+            transform: scale3d(너비, 높이, 깊이);
+
             transform: rotate(각도); (단위: deg)
+            transform: rotateX(x각도); (단위: deg)
+            transform: rotateY(y각도); (단위: deg)
+            transform: rotateZ(z각도); (단위: deg)
+            transform: rotate3d(x, y, z, 각도); (단위: deg)
+
             transform: skew(각도, 각도) (단위: deg);
+            transform: skewX(x각도) (단위: deg);
+            transform: skewY(y각도) (단위: deg);
         */
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
-
+        /*
+            transform: translate(100px, 0);
+            값을 하나만 쓰면 x위치로 적용된다.
+            position:absolute 지정 하여 이동 가능★
+            .outer {
+                position: relative;
+                height:100px;
+            }
+            .trftr {
+                position:absolute;
+                left:0;
+                top:0;
+            }
+            .outer:hover .trftr {
+                left: 100px;
+            }
+        */
+        .outer:hover .trftr {
+            transform: translate(100px, 0);
+            /* transform: translateX(200px) rotate(360deg); */
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
+        /* 
+            transform: scale(1, 1); 1보다 작으면 축소, 1보다 크면 확대,
+            값을 하나만 쓰면 가로/세로 같은 크기로 확대/축소
+        */
+        .outer:hover .trfsc {
+            transform: scale(1.2, 1.2);
+        }
+        /* 
+            변환의 기준
+            transform-origin: x축 y축; (50% 50%이 기본값)
+            값을 하나만 쓰면 x축으로 적용되고, y축은 50%로 지정된다.
 
-
+            transform-origin: 50% 50%;
+            단위: px, %
+            x축: left, right, center
+            y축: top, bottom, center
+        */
         .trfro {
-            /* 변환의 기준 */
             transform-origin: 0 0;
         }
         /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfro {
+            transform: rotate(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfrox {
+            transform: rotateX(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
-
+        .trfroy {
+            transform-origin: 0 0;
+        }
+        .outer:hover .trfroy {
+            transform: perspective(200px) rotateY(80deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
-
+        /* skew(x, y) 하나의 값만 기록하면 x축으로 기울어진다. */
+        .outer:hover .trfsk {
+            transform: skewY(10deg);
+        }
 
     </style>
 </head>

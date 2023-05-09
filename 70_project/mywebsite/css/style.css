@@ -118,6 +118,13 @@ h3 {
     margin: 0 auto;
 }
 /* section3 */
+.p_contents {
+    margin: 20px 0;
+    text-align: center;
+}
+.p_contents h2 {
+    margin: 12px 0;
+}
 .portfolio_img {
     position: relative;
     background: url(../images/parallax2.jpg) no-repeat 50% 50%/ cover fixed;
@@ -159,6 +166,10 @@ form input:nth-of-type(3) {
 form input:not(:nth-of-type(3)) {
     width: 25%;
     height: 25px;
+}
+.c_contact {
+    display: flex;
+    flex-direction: column;
 }
 /* footer */
 footer {

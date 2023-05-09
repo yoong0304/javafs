@@ -91,9 +91,11 @@
         <!-- <div>image</div> -->
         <!-- <img src="images/parallax2.jpg" alt="패럴렉스 배경 이미지2"> -->
         <div class="container">
-            <h2>MY WORK</h2>
-            <p>Here are some of my latest lorem work ipsum tipsum.<br>
-                Click on the images to make them bigger</p>
+            <div class="p_contents">
+                <h2>MY WORK</h2>
+                <p>Here are some of my latest lorem work ipsum tipsum.<br>
+                    Click on the images to make them bigger</p>
+            </div>
             <ul>
                 <li><img src="images/pf1.jpg" alt="포트폴리오1"></li>
                 <li><img src="images/pf2.jpg" alt="포트폴리오2"></li>
@@ -112,26 +114,30 @@
     <section id="contact">
         <b>CONTACT</b>
         <img src="images/parallax3.jpg" alt="패럴렉스 배경 이미지3">
-        <div class="container">
-            <h2>WHERE I WORK</h2>
-            <p>I'd love your feedback!</p>
-            <!-- 구글 맵 -->
-            <div id="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.8316428330218!2d126.92692127661574!3d37.39381357208395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60cbcec0c9cd%3A0x14bbbc5281157e24!2z6rK96riw64-EIOyViOyWkeyLnCDrp4zslYjqtawg7JWI7JaR64-ZIDM5My01!5e0!3m2!1sko!2skr!4v1682405733242!5m2!1sko!2skr"></iframe>
+        <div class="container c_contact">
+            <div class="c_contents1">
+                <h2>WHERE I WORK</h2>
+                <p>I'd love your feedback!</p>
+                <!-- 구글 맵 -->
+                <div id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.8316428330218!2d126.92692127661574!3d37.39381357208395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60cbcec0c9cd%3A0x14bbbc5281157e24!2z6rK96riw64-EIOyViOyWkeyLnCDrp4zslYjqtawg7JWI7JaR64-ZIDM5My01!5e0!3m2!1sko!2skr!4v1682405733242!5m2!1sko!2skr"></iframe>
+                </div>
+                <address>
+                    경기도, 안양시<br>
+                    Phone : +82 10-3623-5092<br>
+                    Email : yoong0304@naver.com
+                </address>
+                <p>Swing by for a cup of <i class="fa-solid fa-mug-saucer"></i>, or leave me a note:</p>
             </div>
-            <address>
-                경기도, 안양시<br>
-                Phone : +82 10-3623-5092<br>
-                Email : yoong0304@naver.com
-            </address>
-            <p>Swing by for a cup of <i class="fa-solid fa-mug-saucer"></i>, or leave me a note:</p>
-            <form action="message.php" method="post">
-                <input type="text" name="user_name" placeholder="Name">
-                <input type="email" name="user_email" placeholder="Email">
-                <input type="text" name="user_message" placeholder="간단한 메시지를 입력하세요.">
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i> SEND MESSAGE</button>
-            </form>
+            <div class="c_contents2">
+                <form action="message.php" method="post">
+                    <input type="text" name="user_name" placeholder="Name">
+                    <input type="email" name="user_email" placeholder="Email">
+                    <input type="text" name="user_message" placeholder="간단한 메시지를 입력하세요.">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i> SEND MESSAGE</button>
+                </form>
+            </div>
         </div>
     </section>
 
