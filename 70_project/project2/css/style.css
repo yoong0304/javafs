@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;900&display=swap');
+
+/* 공통 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+}
+#wrap {
+    width: 1500px;
+    margin: 0 auto;
+}
+.section h2 {
+    height: 65px;
+    border-bottom: 1px solid #ccc;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+section {
+    width: 100%;
+}
+
+/* header */
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 54px;
+    padding: 0 32px;
+    background: orange;
+    display: flex;
+}
+.logo {
+    align-self: center;
+}
+nav {
+    position: relative;
+    left: 70%;
+    align-self: center;
+}
+nav li {
+    margin: 0 10px;
+    display: inline-block;
+}
+/* section1 */
+#home {
+    position: relative;
+}
+#home h2 {
+    color: orange;
+    font-size: 4em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 24px;
+}
+/* section2 */
+#best ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+#best li {
+    width: 24%;
+}
+/* section3 */
+#sale_news ul {
+    display: flex;
+    justify-content: space-between;
+}
+#sale_news li {
+    width: 24%;
+}
+/* footer */
