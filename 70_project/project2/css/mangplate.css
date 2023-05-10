@@ -21,7 +21,7 @@ body {
 .section h2 {
     margin: 16px 0;
     padding-bottom: 16px;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid #ccc;
 }
 li {
     list-style: none;
@@ -57,11 +57,11 @@ header {
 }
 nav {
     position: relative;
-    left: 70%;
+    left: 75%;
     align-self: center;
 }
 nav li {
-    margin: 0 10px;
+    margin: 10px 15px;
     display: inline-block;
 }
 /* section1 */
@@ -91,6 +91,14 @@ nav li {
 }
 #best li {
     width: 24%;
+    cursor: pointer;
+}
+#best li:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+#best li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(4) {
+    margin-bottom: 15px;
 }
 #best h3 {
     font-weight: normal;
@@ -99,21 +107,46 @@ nav li {
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
 }
+#region {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+}
 /* section3 */
 #sale_news ul {
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
 #sale_news li {
+    position: relative;
     width: 24%;
 }
 #sale_news p {
     margin-bottom: 16px;
 }
+#sale_news li a {
+    display: block;
+    background: #cccccc83;
+    text-align: center;
+    padding: 8px 0;
+}
+#sale_news a:hover {
+    background: rgba(255, 2555, 0, 0.7);
+}
+.sale1, .sale2, .sale3, .sale4 {
+    color: orange;
+    opacity: 0.7;
+    font-size: 8rem;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -35%);
+    transform: rotate(40deg);
+    transform-origin: 70% -50%;    
+}
 
-/* #sale_news div {
-    border: 1px solid black;
-} */
 /* section4 */
 #contact input {
     width: 100%;
@@ -131,6 +164,17 @@ nav li {
     color: #fff;
     background: #000;
     border: none;
+    cursor: pointer;
+}
+#contact button:hover {
+    color: #000;
+    background: orange;
+}
+textarea {
+    width: 100%;
+}
+form input:nth-of-type(4) {
+    height: 100px;
 }
 .map {
     height: 500px;
@@ -147,4 +191,5 @@ footer {
     height: 72px;
     padding: 16px;
     text-align: center;
+    line-height: 36px;
 }
