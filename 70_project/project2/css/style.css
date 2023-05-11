@@ -140,8 +140,7 @@ nav a:hover::after {
 }
 
 #home b {
-    padding: 8px 8px;
-    letter-spacing: 15px;
+    
 }
 
 #home h2 {
@@ -149,14 +148,19 @@ nav a:hover::after {
     font-size: 4em;
     position: absolute;
     left: 50%;
-    top: 40%;
+    /* top: 40%; */
     transform: translate(-50%, -50%);
     padding: 8px 24px;
 }
-
+#home .anim_text1 {
+    /* padding: 8px 8px; */
+    letter-spacing: 188px;
+    left: 51.6%;
+    top: 50%;
+}
 /* 이미지 안 로고 움직임 */
-.anim_text1 {
-    top: 55% !important;
+#home .anim_text2 {
+    top: 50%;
     animation: move 2s forwards;
 }
 
