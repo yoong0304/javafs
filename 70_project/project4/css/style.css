@@ -1,31 +1,31 @@
 @charset "utf-8";
+
 /* 초기화 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* 헤더 콘텐츠 푸터 */
-/* .clearfix::after {
-    content: '';
-    clear: both;
-    display: block;
-} */
-header::after, .contents::after, footer::after {
-    content: '';
-    clear: both;
-    display: block;
+
+img {
+    width: 100%;
 }
 
+header,
+#contents,
+footer {
+    display: flex;
+}
+li {
+    list-style: none;
+}
 /* 공통 */
 #wrap {
     /* 가로 가운데 맞춤 */
     width: 1200px;
     margin: 0 auto;
 }
-.logo, nav, #contents div, footer div {
-    float: left;
-}
+
 
 /* 헤더 */
 
@@ -35,6 +35,7 @@ header::after, .contents::after, footer::after {
     height: 100px;
     background: lightpink;
 }
+
 /* 내비게이션 */
 nav {
     width: 1000px;
@@ -44,8 +45,31 @@ nav {
 
 /* 슬라이드 */
 #slide {
+    overflow: hidden;
     height: 300px;
     background: lightcoral;
+}
+
+#slide ul {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 400%;
+    display: flex;
+    animation: slide 9s infinite;
+}
+#slide li {
+    width: 100%;
+}
+@keyframes slide {
+    0% {left: 0;}
+    5% {left: -100%;}
+    33% {left: -100%;}
+    38% {left: -200%;}
+    66% {left: -200%;}
+    71% {left: -300%;}
+    99.99% {left: -300%;}
+    100% {left: 0;}
 }
 
 /* 메인 컨텐츠 */
@@ -53,12 +77,15 @@ nav {
     width: 400px;
     height: 200px;
 }
+
 .tabs {
     background: gold;
 }
+
 .banner {
     background: lavender;
 }
+
 .shortcut {
     background: greenyellow;
 }
@@ -70,11 +97,13 @@ nav {
     height: 100px;
     background: firebrick;
 }
+
 .addr {
     width: 800px;
     height: 100px;
     background: fuchsia;
 }
+
 .sns {
     width: 200px;
     height: 100px;
