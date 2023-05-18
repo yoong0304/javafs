@@ -25,6 +25,12 @@ a {
     color: #555;
     text-decoration: none;
 }
+button {
+    color: #fff;
+}
+::placeholder {
+    color: #ccc;
+}
 .anim_text1 {
     font-size: 3.6rem;
     letter-spacing: 4px;
@@ -32,10 +38,17 @@ a {
 }
 
 /* section2 */
+#best h3 {
+    color: #fff;
+}
 /* #best h3 {
     color: #fff;
 } */
+
+/* section3 */
+
+
 /* footer */
 footer {
-    color: #ccc;
+    color: #777;
 }
