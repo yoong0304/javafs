@@ -15,6 +15,7 @@
             적정 체중 = (신장 - 100) * 0.9
 
             예)
+            이름: 홍길동
             신장: 180cm
             체중: 74kg
             적정 체중: (180 - 100) * 0.9 = 72
@@ -22,20 +23,42 @@
         */
 
         // 입력
-        var userName;
-        var userHeight;
-        var userWeight;
-
+        const user_n = prompt('당신의 이름을 입력하세요.');
+        const user_h = Number(prompt('당신의 키를 입력하세요.'));
+        const user_w = Number(prompt('당신의 체중을 입력하세요.'));
+        const normal_w = (user_h - 100) * 0.9;
+        const result = user_w - normal_w;
+        let user_result;
         // 처리
         // 적정 체중 = (신장 - 100) * 0.9
+        // normal_w = (user_h - 100) * 0.9;
 
-        
+        // result = user_w - normal_w;
+
         // 오차 범위 ±5
+        // 72 - 5 <= ? <= 72 + 5
+        // 67 <= ? && ? <= 77
+
+        // 적정체중이다. 적정체중이 아니다.
+        user_result = user_w >= normal_w - 5 && user_w <= normal_w + 5
+        user_result = (user_result) ? '이다.' : '이 아니다.'
+
+        // 적정체중이다. 비만이다. 저체중이다.
 
 
         // 출력
-        document.write(userName + '님은 ' + result);
-    </script>
+        
+        document.write(user_n + '님의 신장은 현재' + user_h + 'cm이고, ' + '체중은 ' + user_w + 'kg이며, ' + '현재 적정 체중은 ' + normal_w +'kg이며, ' + user_n + '님은 ' + result + 'kg 초과, 적정 체중' + user_result);
+
+        // if(result > 0) {
+        // }
+        // else if(result < 0) {
+        //     document.write(user_n + '님의 신장은 현재' + user_h + 'cm이고, ' + '체중은 ' + user_w + 'kg이며, ' + '현재 적정 체중은 ' + normal_w +'kg이며, ' + user_n + '님은 ' + Math.abs(result) + 'kg 부족, 적정 체중' + user_result);
+        // }
+        // else {
+        //     document.write(user_n + '님은 현재 적정 체중입니다.');
+        // }
+        </script>
 </body>
 
 </html>

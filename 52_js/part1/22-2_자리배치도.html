@@ -18,15 +18,29 @@
                 코드2;
             }
         */
+        
+        // 학생수와 한 줄에 앉는 인원수를 입력받아, 총 몇 줄이 필요한지 구하시오
 
         // 입력
-
-
+        let stu_num = prompt("총 학생 수를 입력하세요.");
+        let count = prompt("한 줄에 앉는 인원은 몇명인가요?");
+        let total_row;
         // 처리
-
+        // total_row = stu_num / count;
+        if (stu_num % count === 0) {
+            total_row = parseInt(stu_num / count);
+        } else {
+            total_row = parseInt(stu_num / count) + 1;
+        }
 
         // 출력
+        // if (stu_num % count === 0) {
+        //     document.write("총 " + parseInt(total_row) + "줄이 필요합니다.");
+        // } else {
+        //     document.write("총 " + parseInt(total_row + 1) + "줄이 필요합니다.");
+        // }
 
+        document.write("총 " + total_row + "줄이 필요합니다.")
 
     </script>
 </body>
