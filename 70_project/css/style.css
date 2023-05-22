@@ -137,10 +137,11 @@ section h2 + p {
 }
 
 /* section3 */
+
+
 #portfolio .parallax {
     background-image: url(../images/parallax2.jpg);
 }
-
 
 /* 
     max-width: 960px
@@ -150,16 +151,67 @@ section h2 + p {
 */
 #portfolio ul {
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 #portfolio li {
     width: 231px;
     height: 162px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+#portfolio .moreBtn {
+    margin-top: 64px; /* 인라인요소이면 안먹힘 */
+    text-align: center;
+}
+
+#portfolio .moreBtn a {
+    padding: 12px 24px;
+    background: #f1f1f1;
 }
 /* section4 */
 #contact .parallax {
     background-image: url(../images/parallax3.jpg);
 }
+#contact .container {
+    display: flex;
+}
+#map {
+    flex: 0 0 330px;
+    height: 160px;
+    margin-right: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#contact address i {
+    margin-right: 20px;
+}
+#contact address + p {
+    margin: 16px 0;
+}
+#contact form {
+    text-align: right;
+}
+#contact [name] {
+    width: 292px;
+    height: 44px;
+    padding-left: 8px;
+}
+#contact [name="user_name"] {
+    margin-right: 12px;
+}
+#contact [name $= "message"] {
+    width: 600px;
+    margin: 16px 0;
+}
+#contact button {    
+    width: 160px;
+    height: 44px;
+    background: #000;
+    color: #fff;
+}
+
+
 /* footer */
 footer {
     /* display: flex;

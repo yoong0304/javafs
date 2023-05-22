@@ -93,18 +93,22 @@ nav {
     margin: 20px 0 45px;
     background: #000;
 }
+#news .map {
+    height: 185px;
+}
 /* footer */
 footer {
     background: #000;
     text-align: center;
+    margin-top: 8px;
     padding: 30px 0;
 }
 footer span:nth-of-type(1), footer span:nth-of-type(3) {
     display: none;
 }
 
-/* 992 이상 */
-@media (min-width: 992px) {
+/* 600 이상 */
+@media (min-width:600px) {
     /* header */
     header {
         display: flex;
@@ -121,6 +125,44 @@ footer span:nth-of-type(1), footer span:nth-of-type(3) {
         margin-left: 36px;
     }
 
+    /* main title */
+    #main_img .main_tit {
+        white-space: nowrap;
+    }
+    #main_img span {
+        display: inline-block;
+        margin-left: 16px;
+        text-shadow: 1px 0px 5px #000;
+    }
+
+    /* section 2~4 common */
+    .section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section li {
+        width: calc(50% - 8px);
+    }
+    /* section3 */
+    #event li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #event li div {
+        height: 250px;
+        /* flex-grow: 1; */
+    }
+    /* section4 */
+    #news .map {
+        height: 400px;
+    }
+}
+
+/* 992 이상 */
+@media (min-width: 992px) {
+    
     /* section1 */
     #main_img {
         max-width: 1496px;
@@ -129,29 +171,26 @@ footer span:nth-of-type(1), footer span:nth-of-type(3) {
 
     /* section 2~4 common */
     .section {
-        width: 1496px;
+        max-width: 1496px;
         margin: 0 auto;
-        padding: 81px 0;
+        padding: 81px 30px 0;
     }
-    .section ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+
     .section li {
-        width: 362px;
+        width: calc(25% - 8px);
     }
     /* section2 */
-    /* section3 */
-    #event li {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    #event li div {
-        flex-grow: 1;
-        background: yellow;
-    }
+    
     /* section4 */
+    #news .map {
+        height: 845px;
+    }
     /* footer */
+    footer span:nth-of-type(1), footer span:nth-of-type(3) {
+        display: inline-block;
+    }
+    footer span:nth-of-type(2) {
+        display: none;
+    }
 }
+
