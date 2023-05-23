@@ -12,7 +12,7 @@
     <h1>함수</h1>
     <script>
         /* 
-            return: 함수 호출문에 결괏값 반환하고 함수 종료
+            return: 함수 호출문에 결과값 반환하고 함수 종료
 
             함수 정의
                 function 함수명() {
@@ -24,7 +24,17 @@
                 var 변수 = 함수명();
         */
 
+        // 변수의 scope(범위)
+        // 전역변수 ~ 함수 내외에서 모두 사용 가능
+        // 지역변수 ~ 매개변수, 함수 내에서 사용하는 변수
 
+        // let sum; // 전역변수 
+        function add(a,b) {
+            let sum = a + b; // let으로 선언을 안 하면 위에 sum이랑 같은 변수이다.
+            document.write(sum);
+            return sum;
+        }
+        add(1,2);
     </script>
 </body>
 
