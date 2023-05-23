@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>이미지 갤러리</h1>
+    <div id="galleryZone">
+        <p>
+            <!-- 인라인 스크립트(gallery();) -->
+            <button onclick="gallery(1);">1</button>
+            <button onclick="gallery(2);">2</button> <!-- 0 과 1은 참 거짓을 구분하기 위함, 별 뜻은 없다. -->
+            <button onclick="gallery(3);">3</button>
+        </p>
+        <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
+    </div>
+    <!-- 내부 스크립트 -->
+    <script>
+        const imgTag = document.getElementById('photo'); // photo id를 가진 것을 imgTag에 할당
+        let num = 1; // num은 전역 변수
+        function gallery(direct) {
+           
+
+            
+            imgTag.setAttribute('src', '../assets/pic_' + direct + '.jpg'); // 변수imgTag의 src속성을 변경
+
+        }
+    </script>
+</body>
+
+</html>

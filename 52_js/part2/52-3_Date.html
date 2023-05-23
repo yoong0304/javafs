@@ -39,29 +39,72 @@
             setMilliseconds()
             setTime()
         */
-        
+
         let d = new Date();
         console.log(d); // Tue May 23 2023 16:16:50 GMT+0900 (한국 표준시)
         // 년(yyyy)
         document.write(d.getFullYear(), '<br>');
         // 월(mm): 0(1월) ~ 11(12월)
-        document.write(d.getMonth(), '<br>');
+        document.write(d.getMonth() + 1, '<br>');
         // 일(dd)
         document.write(d.getDate(), '<br>');
         // 요일(week): 0(일) ~ 6(토)
-        document.write(d.getDay(), '<br>');
-        // 시(hh)
-        document.write(d.getHours(), '<br>');
-        // 분(mm)
-        document.write(d.getMinutes(), '<br>');
-        // 초(ss)
-        document.write(d.getSeconds(), '<br>');
-        document.write(d.getTime(), '<br>');
-        
-        var d2 = new Date(2020, 5, 23);
-        console.log(d2);
+        // if를 사용하여 요일을 일요일 ~ 토요일까지 문자열로 표시하기
+        document.write(d.getDay(), '요일 <br>');
+        let week = d.getDay();
+        if (week === 0) {
+            week = '일요일<br>';
+        } else if (week === 1) {
+            week = '월요일<br>';
+        } else if (week === 2) {
+            week = '화요일<br>';
+        } else if (week === 3) {
+            week = '수요일<br>';
+        } else if (week === 4) {
+            week = '목요일<br>';
+        } else if (week === 5) {
+            week = '금요일<br>';
+        } else {
+            week = '토요일<br>';
+        }
+        document.write(week);
 
-        
+
+        // 시(hh)
+        // 오전과 오후를 구분하여 12시간제로 표시하기
+        document.write(d.getHours(), '<br>');
+
+        let time = d.getHours();
+        if (time === 24) {
+            time -= 24;
+            document.write(time + 'am <br>');
+        } else if (time === 12) {
+            document.write(time + 'pm <br>');
+        } else if (time > 12) {
+            time -= 12;
+            document.write(time + 'pm <br>');
+        } else {
+            document.write(time + 'am <br>');
+        }
+
+        // 분(mm)
+        let mm = d.getMinutes();
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        document.write(mm, '<br>');
+
+        // 초(ss)
+        let ss = d.getSeconds();
+        if (ss < 10) {
+            ss = '0' + ss;
+        }
+        document.write(ss, '<br>');
+
+
+
+
+
     </script>
 </body>
 

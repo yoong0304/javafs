@@ -19,9 +19,16 @@
             전역 변수(Global Variables)
                 - 자바스크립트 모든 영역에서 사용할 수 있는 변수
         */
-
-
-
+        // 전역변수
+        var a = 10;
+        function myFn() {
+            // 지역변수
+            var a = 5;
+            document.write('지역변수 a = ' + a, '<br>');
+        }
+        
+        document.write('전역변수 a = ' + a, '<br>');
+        myFn();
     </script>
 </body>
 

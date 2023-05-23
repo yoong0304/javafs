@@ -62,11 +62,13 @@
         let num = 1; // num은 전역 변수
         function gallery(direct) {
             if (direct) {
-                if (num === 8) return; // num이 8이되면 if문을 빠져나감
+                if (num === 10) num = 0;
                 num++;
+                console.log(num);
             } else {
-                if (num === 1) return; // num이 1이되면 if문을 빠져나감
+                if (num === 1) num = 11;
                 num--;
+                console.log(num);
             }
 
             const imgTag = document.getElementById('photo'); // photo id를 가진 것을 imgTag에 할당
