@@ -13,16 +13,38 @@
     <script>
        /* 
             splice(index, count, value1, value2, ...): index번호부터 count개수만큼 삭제 후 value 추가
+
             pop(): 마지막 인덱스에 저장된 데이터 삭제
-            shift(): 첫 번째 인덱스에 저장된 데이터 삭제
             push(new data): 마지막 인덱스에 새 데이터 삽입
+
+            shift(): 첫 번째 인덱스에 저장된 데이터 삭제
             unshift(new data): 첫 번째 인덱스에 새 데이터 삽입
        */
 
         var greenArr = ['교대', '방배', '강남'];
         var yellowArr = ['미금', '정자', '수서'];
 
+        // 기존 배열에 영향을 미친다.
+        document.write(greenArr.splice(1, 2, '서초', '역삼'),'<br>'); // 삭제 된 데이터가 출력된다.
+        document.write(greenArr,'<br>');
+        
 
+        let data1 = greenArr.pop(); // 마지막 인덱스 안에 데이터 삭제
+        let data2 = greenArr.shift(); // 처음 인덱스 안에 데이터 삭제
+        document.write(data1,'<br>');
+        document.write(data2,'<br>');
+        document.write(greenArr,'<br>');
+
+        yellowArr.push(data1)
+        document.write(yellowArr,'<br>');
+
+        yellowArr.unshift(data2);
+        document.write(yellowArr,'<br>');
+        document.write(yellowArr[0])
+
+        // let numArr = [70, 3, 1000, 500]
+        // 값을 하나하나 비교해서 위치를 바꿔야함
+        // document.write(numArr.sort()); x
 
     </script>
 </body>
