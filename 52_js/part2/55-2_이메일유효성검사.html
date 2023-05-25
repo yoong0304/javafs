@@ -24,24 +24,31 @@
             length: 문자열의 문자 총 개수 반환
         */
 
-        var userEmail = prompt('당신의 이메일 주소는?', '');
-        var arrUrl = ['.co.kr', '.com', '.net', '.or.kr', '.go.kr'];
+        const userEmail = prompt('이메일을 입력하세요.');
+        const urlArr = ['.co.kr', '.com', '.ac.kr', '.net', '.or.kr'];
 
-        var check1 = false;
-        var check2 = false;
+        let check1 = false;             // check1과 check2는 값이 바뀌기 때문에 let 선언
+        let check2 = false;
 
-        if (userEmail.indexOf('@') > 0) {check1 = true;}
 
-        for (var i = 0; i < arrUrl.length; i++) {
-            if (userEmail.indexOf(arrUrl[i]) > 0) {
-                check2 = true;
+        if (userEmail.indexOf('@') > 0) {   // 입력한 이메일 안에 @가 있는지 검사
+            check1 = true;                  // 참이면 check1 true
+        }
+
+        for (let i = 0; i <= urlArr.length; i++) {
+            if (userEmail.indexOf(urlArr[i]) > 0) {         // 입력한 이메일 안에 도메인 주소가 있는지 검사
+                check2 = true;                              // 참이면 check2 true
             }
         }
-        if (check1 && check2) {
-            document.write(userEmail);
+        if (check1 && check2) {             
+            document.write(userEmail + '님 환영합니다.');   // check1과 check2가 모두 참이면 코드 실행
+            // location.href = "https://naver.com";
         } else {
-            alert('이메일 형식이 잘못되었습니다.');
+            alert('이메일을 잘 못 입력하였습니다.');
+            location.reload();                              // 재실행
         }
+
+        
 
     </script>
 </body>

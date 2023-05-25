@@ -18,7 +18,14 @@
         */
 
         // 전화번호 뒤 4자리 '*'표시 하기
+        let userName = prompt('이름을 입력하세요');
 
+        let upName = userName.toUpperCase();
+        document.write(upName, '<br>');
+
+        let userPhone = prompt('핸드폰 번호를 입력하세요');
+        let phoneNum = userPhone.substring(0, userPhone.length - 4) + '****';
+        document.write(phoneNum, '<br>');
 
     </script>
 </body>
