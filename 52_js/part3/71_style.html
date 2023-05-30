@@ -25,11 +25,27 @@
 <body>
     <div class="box1"></div>
     <div class="box2"></div>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
     <script>
         /* 
             객체.style.속성 = 값;
         */
+
+        // 빨간색 박스의 가로/세로 크기를 모두 300px으로 지정하시오.
+
+        // document.querySelector('.box2').style.width = '300px';
+        // document.getElementsByClassName('box2')[0].style.width ='300px';
+        // document.getElementsByClassName('box2')[0].style.height = '300px';
+
+        // const box2 = document.querySelector('.box2');
+        // box2.style.width = 300 + 'px';
+        // box2.style.height = '300px';
+
+        const jqBox2 = $('.box2');
+        // jqBox2.css({width: '300px'});
+        // jqBox2.css({height: '300px'});
+        jqBox2.css({width: 300, height: 300}); // 단위를 생략하면 px단위
+        
 
     </script>
 </body>

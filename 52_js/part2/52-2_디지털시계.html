@@ -20,7 +20,90 @@
         <span class="ss">초</span>
     </div>
     <script>
+        let d = new Date();
 
+        
+
+
+        console.log(d); // Tue May 23 2023 16:16:50 GMT+0900 (한국 표준시)
+
+        
+        // 년(yyyy)
+        document.write(d.getFullYear(), '<br>');
+        // 월(mm): 0(1월) ~ 11(12월)
+        document.write(d.getMonth() + 1, '<br>');
+        // 일(dd)
+        document.write(d.getDate(), '<br>');
+        // 요일(week): 0(일) ~ 6(토)
+        // if를 사용하여 요일을 일요일 ~ 토요일까지 문자열로 표시하기
+        document.write(d.getDay(), '요일 <br>');
+        let week = d.getDay();
+        if (week === 0) {
+            week = '일요일<br>';
+        } else if (week === 1) {
+            week = '월요일<br>';
+        } else if (week === 2) {
+            week = '화요일<br>';
+        } else if (week === 3) {
+            week = '수요일<br>';
+        } else if (week === 4) {
+            week = '목요일<br>';
+        } else if (week === 5) {
+            week = '금요일<br>';
+        } else {
+            week = '토요일<br>';
+        }
+        document.write(week);
+
+
+        // 시(hh)
+        // 오전과 오후를 구분하여 12시간제로 표시하기
+        document.write(d.getHours(), '<br>');
+
+        let time = d.getHours();
+        if (time === 24) {
+            time -= 24;
+            document.write(time + 'am <br>');
+        } else if (time === 12) {
+            document.write(time + 'pm <br>');
+        } else if (time > 12) {
+            time -= 12;
+            document.write(time + 'pm <br>');
+        } else {
+            document.write(time + 'am <br>');
+        }
+
+        // 분(mm)
+        let mm = d.getMinutes();
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        document.write(mm, '<br>');
+
+        // 초(ss)
+        let ss = d.getSeconds();
+        if (ss < 10) {
+            ss = '0' + ss;
+        }
+        document.write(ss, '<br>');
+
+        let yy = document.querySelector('.yy');
+        let mmm = document.querySelector('.mm');
+        let dd = document.querySelector('.dd');
+        let we = document.querySelector('.we');
+        let hh = document.querySelector('.hh');
+        let mi = document.querySelector('.mi');
+        let sss = document.querySelector('.ss');
+        
+
+        
+        yy.innerHTML = d.getFullYear() + '년';
+        mmm.innerHTML = (d.getMonth()+1) + '월';
+        dd.innerHTML = d.getDate() + '일';
+        we.innerHTML = week;
+        hh.innerHTML = time + '시';
+        mi.innerHTML = mm + '분';
+        sss.innerHTML = ss + '초';
 
     </script>
 </body>

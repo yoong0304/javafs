@@ -17,7 +17,7 @@
     <button id="btn4">감소 정지</button>
     <script>
         /* 
-            setInterval(): 일정한 시간 간격으로 코드를 반복 실행
+            setInterval(코드, 시간): 일정한 시간 간격으로 코드를 반복 실행
             clearInterval(): setInterval() 메서드 제거
 
             setInterval(함수, 시간);
@@ -58,6 +58,8 @@
             객체.on이벤트종류 = function() {
                 코드;
             };
+
+            setInterval 주의사항 - 함수 호출할 때 ()는 쓰지 않는다.
         */
         let auto1, auto2;
 
