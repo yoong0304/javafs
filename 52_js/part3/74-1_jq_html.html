@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        button {
+            font-size: 20px;
+            margin: 20px;
+        }
+        span {
+            font-size: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>태그 구조 바꾸기</button>
+    <div>
+        <span>변경전 입니다.</span>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script>
+        /* 
+            객체.속성; -> 반환(가져오기)
+            객체.html(값); -> 설정(지정하기)
+        */
+        /* 
+            버튼을 클릭하면 '변경전 입니다.' 글자를 '변경후 입니다.'로 바꾼다. (단, <h1> 태그 삽입) 또한 변경된 텍스트인 '변경후 입니다.'를 클릭하면 '<h1>변경후 입니다.</h1>'를 경고창으로 띄운다.
+        */
+        const btn = $('button');
+        const box = $('div');
+        let num = 0;
+        
+        btn.click(function() {
+            if (num === 0) {
+                box.html('<h1>변경후 입니다.</h1>');
+                num++;
+            } else if (num === 1) {
+                box.html('<span>변경전 입니다.</span>');
+                num--;
+            }
+
+        });
+
+        box.click(function() {
+            let abc = box.html();
+            alert(abc);
+            
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #fullpage div {
+            height: 100vh;
+        }
+        #section1 {
+            background: lightblue;
+        }
+        #section2 {
+            background: lightgoldenrodyellow;
+        }
+        #section3 {
+            background: lightcoral;
+        }
+        #section4 {
+            background: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+    <script>
+        const box1 = document.querySelector('#section1');
+        const box2 = document.querySelector('#section2');
+        const box3 = document.querySelector('#section3');
+        const box4 = document.querySelector('#section4');
+        let num = 0;
+        box1.onwheel = function(e1){
+            // 마우스휠을 내리면 e.deltaY가 양수
+            if (e1.deltaY > 0){
+                location.href = '#section2';
+            } 
+        };
+        box2.onwheel = function(e2){
+            // 마우스휠을 내리면 e.deltaY가 양수
+            if (e2.deltaY > 0){
+                location.href = '#section3';
+            } else {
+                location.href = '#section1'
+            }
+        };
+        box3.onwheel = function(e3){
+            // 마우스휠을 내리면 e.deltaY가 양수
+            if (e3.deltaY > 0){
+                location.href = '#section4';
+            } else {
+                location.href = '#section2';
+            }
+        };
+        box4.onwheel = function(e4){
+            // 마우스휠을 내리면 e.deltaY가 양수
+            if (e4.deltaY < 0){
+                location.href = '#section3';
+            } 
+        };
+
+    </script>
+</body>
+</html>
