@@ -67,7 +67,7 @@
     <div id="lightbox">
         <img src="../assets/pic_1.jpg" alt="" id="lightboxImage">
     </div>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
     <script>
         /*
             요소.getAttribute('속성명') ~ HTML 속성 반환
@@ -81,43 +81,24 @@
                 - lightboxImg(큰 이미지)
                 - imgs(썸네일 이미지)
             이벤트: click
-            메서드: getAttribute(), setAttribute()
+            메서드: attr(), find(), css()
             사용자 정의 함수: showLightbox()
         */
+        const lightbox = $('#lightbox');
+        const lightboxImg = lightbox.find('#lightboxImage');
+        const imgs = $('.pic');
 
-        // let imgs = document.getElementsByClassName('pic');
-        // let lightbox = document.getElementById('lightbox');
-        // let lightboxImg = document.getElementById('lightboxImage');
-
-        // for(let i = 0; i < imgs.length; i++) {
-        //     imgs[i].onclick = showLightbox;
-        // }
-        // function showLightbox() {
-        //     let a = this.getAttribute('data-src');
-        //     lightboxImg.setAttribute('src',a);
-        //     lightbox.style.display = 'block';
-        // }
-
-        // lightbox.onclick = function() {
-        //     lightbox.style.display = 'none';
-        // }
-        const imgs = document.querySelectorAll('.pic');
-        const lightbox = document.querySelector('#lightbox');
-        const lightboxImg = document.querySelector('#lightboxImage');
-
-        for(let i = 0; i < imgs.length; i++) {
-            imgs[i].onclick = showLightbox;
-        }
+        imgs.click(showLightbox);
 
         function showLightbox() {
-            let a = this.getAttribute('data-src');
-            lightboxImg.setAttribute('src', a)
-            lightbox.style.display = 'block';
+            let a = $(this).attr('data-src');
+            lightboxImg.attr('src', a)
+            lightbox.css({display: 'block'});
         }
 
-        lightbox.onclick = function() {
-            lightbox.style.display = 'none';
-        }
+        lightbox.click(function() {
+            $(this).css({display: 'none'});
+        }); 
 
     </script>
 </body>

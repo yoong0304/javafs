@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* 가로 해상도: 390px */
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        #wrap {
+            margin: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: 14px;
+            color: red;
+        }
+
+        button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+            font-size: 20px;
+        }
+        #member {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 100px;
+            font-size: 1.5rem;
+            color: #777;
+            /* margin-top: 300px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>게임이름</h1>
+        <div id="result">결과가 궁금하시죠?</div>
+        <button id="againBtn">다시 하기</button>
+        <button id="logoutBtn">게임 종료</button>
+        <p>아이디와 패스워드를 입력후 로그인하세요.</p>
+
+        <p id="member">계정이 없으신가요? <a href="93_member.html">가입하기</a></p>
+    </div>
+
+    <script>
+        const againBtn = document.querySelector('#againBtn');
+        const logoutBtn = document.querySelector('#logoutBtn');
+        const result = document.querySelector('#result');
+
+        let game = prompt('가위, 바위, 보 중 쓰세요', '가위');
+        // let gameNum;
+
+        switch (game) {
+            case '가위':
+                gameNum = 1; break;
+            case '바위':
+                gameNum = 2; break;
+            case '보':
+                gameNum = 3; break;
+            default : alert('가위, 바위, 보 중 하나만 입력하세요.');
+            location.reload();
+        }
+
+        // 1 <= x < 4
+        let com = Math.floor(Math.random() * 3) + 1;
+        document.write('<img src = "../assets/math_img_', com, '.jpg">');
+
+        if(gameNum === com) {
+            // result.innerHTML = '<p>축하합니다. 맞추었습니다</p>';
+            result.innerHTML = '<img src = "../assets/game_1.jpg">';
+        } else {
+            result.innerHTML = '<img src = "../assets/game_2.jpg">';
+        }
+        
+        againBtn.onclick = function() {
+            location.reload();
+        }
+        logoutBtn.onclick = function() {
+            location.href = '92_login.html';
+        }
+     </script>
+</body>
+
+</html>

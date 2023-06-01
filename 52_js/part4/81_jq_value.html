@@ -31,9 +31,10 @@
     <input type="text">
     <button>성인인증</button>
     <p>당신의 나이를 숫자로 입력한 후 성인인증 버튼을 클릭하세요.</p>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
     <script>
         /* 
+            $().val()
             요소.value ~ input에 입력된 값 반환
             요소.value = 값 ~ input에 입력된 값 설정
         */
@@ -46,12 +47,13 @@
             4. 숫자가 아닌 다른 문자를 입력했다면 '숫자를 입력해주세요.'
         */
 
-        const btn = document.querySelector('button');
-        const age = document.querySelector('input');
+        const btn = $('button');
+        const age = $('input');
 
-        btn.onclick = adult;
+        btn.click(adult);
+
         function adult() {
-            let num = age.value;
+            let num = $(age).val();
             let txt;
             if (num >= 19) {
                 txt = '당신은 성인입니다.';
