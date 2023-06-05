@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <h1>요소 추가하기</h1>
+    <div id="info">내용</div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script>
+        /* 
+            $('선택자a').createElement('선택자b') ~ 요소a에 요소b 추가
+
+            before<div id="info">(prepend)내용append</div>after
+            A.append(b) ~ A에 b 추가
+            A.prepend(b) ~ A에 b 추가
+            b.appendTo(A) ~ A에 b 추가
+            b.prependTo(A) ~ A에 b 추가
+
+            A.after(b) ~ A에 b 추가
+            A.before(b) ~ A에 b 추가
+        */
+        /* 
+            #info 박스에 p요소를 삽입하고,
+            p요소의 내용으로 'DOM이란? Document Object Model의 줄임말이다.'을 삽입하여 #info 박스에 연결하시오.
+            #info 박스의 img 요소를 생성하여(src는 'pic_htmltree') p요소 아래에
+            추가하시오.
+
+            메서드: createElement(), append()
+        */
+
+        let info = $('#info');
+        const pTag1 = '<p>append</p>';
+        const pTag2 = '<p>prepend</p>';
+        const pTag3 = '<p>before</p>';
+        const pTag4 = '<p>after</p>';
+        const imgTag = '<img src="../assets/pic_htmltree.gif">';
+
+
+        const txt = 'DOM이란? Document Object Model의 줄임말이다.';
+        info.append(pTag1);
+        info.prepend(pTag2);
+        info.after(pTag3);
+        info.before(pTag4);
+
+        
+        info.append(imgTag);
+        // imgTag.attr('src', '../assets/pic_htmltree.gif');
+        // imgTag.attr('alt', 'DOMTree');
+
+    </script>
+</body>
+
+</html>

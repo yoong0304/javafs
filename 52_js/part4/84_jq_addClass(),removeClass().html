@@ -24,6 +24,7 @@
         }
         div.active {
             transform: rotate(45deg);
+            /* transition: 2s */
         }
     </style>
 </head>
@@ -32,28 +33,30 @@
     <button id="btn1">클래스 추가</button>
     <button id="btn2">클래스 제거</button>
     <div></div>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
     <script>
         /* 
-            요소.classList.add('클래스1', '클래스2', ...) ~ 요소의 클래스 추가
-            요소.classList.remove('클래스1', '클래스2', ...) ~ 요소의 클래스 제거
+            $('선택자').addClass('클래스1 클래스2 ...', 함수) ~ 요소의 클래스 추가
+            $('선택자').removeClass('클래스1 클래스2 ...') ~ 요소의 클래스 제거
+            $('선택자').removeClass() ~ 요소의 모든 클래스 제거
         */
         /* 
             클래스 추가 버튼을 클릭하면 아래 회색 박스에 on 클래스를 추가하고, 클래스 제거 버튼을 클릭하면 아래 회색 박으세 on 클래스를 제거하시오.
 
-            메서드: classList.add(), classList.remove()
+            메서드: addClass(), removeClass()
         */
 
-        const btn1 = document.querySelectorAll('button')[0];
-        const btn2 = document.querySelectorAll('button')[1];
-        const divTag = document.querySelector('div');
+        const btn1 = $('#btn1');
+        const btn2 = $('#btn2');
+        const divTag = $('div');
 
-        btn1.onclick = function(){
-            divTag.classList.add('on', 'active');
-        }
-        btn2.onclick = function(){
-            divTag.classList.remove('on', 'active');
-        }
+        btn1.click(function(){
+            divTag.addClass('on active');
+        });
+        btn2.click(function(){
+            divTag.removeClass('on active');
+            
+        });
     </script>
 </body>
 

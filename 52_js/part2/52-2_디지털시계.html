@@ -88,7 +88,6 @@
         document.write(ss, '<br>');
 
         
-        
         let yy = document.querySelector('.yy');
         let mmm = document.querySelector('.mm');
         let dd = document.querySelector('.dd');
@@ -97,7 +96,11 @@
         let mi = document.querySelector('.mi');
         let sss = document.querySelector('.ss');
         
-        setTimeout(function(){
+        
+        setInterval(function(){
+            
+
+
             yy.innerHTML = d.getFullYear() + '년';
             mmm.innerHTML = (d.getMonth()+1) + '월';
             dd.innerHTML = d.getDate() + '일';
@@ -105,7 +108,7 @@
             hh.innerHTML = time + '시';
             mi.innerHTML = mm + '분';
             sss.innerHTML = ss + '초';
-        }, 1000)
+        }, 1000);
         
 
     </script>
