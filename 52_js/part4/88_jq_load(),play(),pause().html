@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .box {
+            width: 400px;
+            margin-top: 20px;
+        }
+        .box video {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="btnSet">
+        <button class="load">처음으로</button>
+        <button class="play">재생</button>
+        <button class="pause">일시정지</button>
+    </div>
+    <div class="box">
+        <video>
+            <source src="../assets/video/uber_main_220126.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script>
+        /* 
+            비디오요소.load() ~ 비디오 불러오기 -> 처음으로
+            비디오요소.play() ~ 비디오 재생하기
+            비디오요소.pause() ~ 비디오 일시정지
+        */
+        /* 
+            '처음으로' 버튼을 클릭하면 비디오 영상이 처음 위치로 돌아가게
+            '실행' 버튼을 클릭하면 비디오 영상이 실행되게
+            '일시정지' 버튼을 클릭하면 비디오 영상이 일시정지되게 하시오.
+
+            이벤트: click
+            메서드:load(), play(), pause(),get()
+        */
+
+        const video = $('video').get(0);
+        const loadBtn = $('.load');
+        const playBtn = $('.play');
+        const pauseBtn = $('.pause');
+
+        // 비디오가 처음 상태로
+        loadBtn.click(videoStop);
+        function videoStop() {
+            video.load();
+        }
+
+        // 비디오 실행
+        playBtn.click(videoPlay);
+        function videoPlay() {
+            video.play();
+        }
+
+        // 비디오 일시정지
+        pauseBtn.click(videoPause);
+        function videoPause() {
+            video.pause();
+        }
+    </script>
+</body>
+
+</html>

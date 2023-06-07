@@ -30,6 +30,19 @@
             document.documentElement.scrollTop ~ 창에서 스크롤한 양 반환
         */
 
+        /* 
+            창에 스크롤을 움직이면 p요소에 스크롤양을 표시하시오.
+
+            이벤트: scroll
+            속성: scrollTop
+            객체: window, document.documentElement
+        */
+        const pTag = document.querySelector('p');
+
+        document.onscroll = function() {
+            let text = document.documentElement.scrollTop;
+            pTag.innerText = text;
+        }
     </script>
 </body>
 
