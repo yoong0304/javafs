@@ -24,8 +24,11 @@
             height: 70px;
             border-radius: 50%;
             cursor: pointer;
-            text-indent: -9999em;
             border: 3px solid #fff;
+            text-indent: -9999em;
+            opacity: 0;
+            transition: .3s;
+
         }
         
         .btn::after {
@@ -40,6 +43,7 @@
             border-top: 25px solid transparent;
             border-left: 40px solid #fff;
             border-bottom: 25px solid transparent;
+            
         }
         .btn.on::after {
             width: 40px;
@@ -88,6 +92,12 @@
                 num = 0
             }
         };
+        $('.vid').mouseenter(function(){
+            btn.css({opacity:1})
+        })
+        $('.vid').mouseleave(function(){
+            btn.css({opacity:0})
+        })
     </script>
 </body>
 

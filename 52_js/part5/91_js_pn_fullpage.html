@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fullPage</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             margin: 0;
         }
@@ -33,26 +36,24 @@
         <div id="section3" class="section">섹션3</div>
         <div id="section4" class="section">섹션4</div>
     </div>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script> -->
+
     <script>
         /* 
             마우스휠 조정시 위아래로 한 칸씩 섹션 이동시킨다.
 
-            이벤트: mousewheel
-            메서드: next(), prev(), offset(), stop()
-            속성: top, scrollTop            //scrollTop -> jquery에만 있는 속성
-            제어문: else if
+            이벤트: wheel
+            속성: nextElementSibling, previousElementSibling, offsetTop, scrollTop
+            키워드: this
+            제어문: if
 
             // mousewheel 이벤트 형식
-            $('선택자').mousewheel(function(e,delta){
-                if (delta > 0){
+            요소.onwheel = function(e){
+                if (e.deltaY < 0){
                     // 마우스휠을 위로 올림
-                } else if (delta < 0) {
+                } else if (e.deltaY > 0) {
                     // 마우스휠을 아래로 내림
                 }
-            });
+            };
 
             // error(에러, bug): debugging(디버깅) - 에러 수정
             // error 처리: try ~ catch ~ finally
@@ -62,26 +63,29 @@
                 에러시 처리할 내용
             }
         */
-        $('.section').mousewheel(function (e, delta){
-            if (delta > 0 ) {
-                try {
-                    let prev = $(this).prev().offset().top;
-                    console.log(prev);
-                    $('html').stop().animate({scrollTop: prev});
-                } catch (err) {
-                    return false;
-                }
-            } else if (delta < 0) {
-                try {
-                    let next = $(this).next().offset().top;
-                    console.log(next);
-                    $('html').stop().animate({scrollTop: next});
-                } catch (err) {
-                    return false;
-                }
-            }
-        });
+        const secs = document.querySelectorAll('.section')
 
+        for (let i = 0; i < secs.length; i++) {
+            secs[i].onwheel = function (e){
+                if (e.deltaY < 0 ) {
+                    try {
+                        let prev = e.target.previousElementSibling.offsetTop;
+                        console.log(prev);
+                        document.documentElement.scrollTop = prev;
+                    } catch (err) {
+                        return false;
+                    }
+                } else {
+                    try {
+                        let next = e.target.nextElementSibling.offsetTop;
+                        console.log(next);
+                        document.documentElement.scrollTop = next;
+                    } catch (err) {
+                        return false;
+                    } // try~catch
+                } // if
+            }; // onwheel
+        } // for문
     </script>
 </body>
 </html>
