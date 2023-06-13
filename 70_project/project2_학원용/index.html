@@ -1,147 +1,142 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메가커피</title>
+    <title>fullpage.js</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="js/script.js"></script>
 </head>
+
 <body>
     <div id="fullpage">
-        <div class="section">SECTION1</div>
-        <div class="section">SECTION2</div>
-        <div class="section section3" id="section3">
-            <h2>SECTION3</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+        <!-- 섹션1 -->
+        <div class="section" id="section1">
+            <header id="header">
+                <h1 class="logo"><a href="#"><b>MANGOPLATE</b><span>망고플레이트</span></a></h1>
+                <!-- 서브메뉴의 배경 -->
+                <div class="nav_bg"></div>
+                <nav id="gnb">
+                    <ul class="main">
+                        <li><a href="#">해외여행</a>
+                            <ul class="sub">
+                                <li><a href="#">동남아/대만</a></li>
+                                <li><a href="#">중국/홍콩</a></li>
+                                <li><a href="#">유럽/두바이</a></li>
+                                <li><a href="#">미주/하와이</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">국내여행</a>
+                            <ul class="sub">
+                                <li><a href="#">서울/경기권</a></li>
+                                <li><a href="#">충청권</a></li>
+                                <li><a href="#">전라권</a></li>
+                                <li><a href="#">경상/강원권</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">제주도</a>
+                            <ul class="sub">
+                                <li><a href="#">버스여행</a></li>
+                                <li><a href="#">자유여행</a></li>
+                                <li><a href="#">호텔/펜션</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">소식</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자유게시판</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- 로그인/회원가입 -->
+                <div class="member">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                </div>
+            </header>
+
+            <!--  <div class="vid"> -->
+            <!-- 비디오는 자동 플레이되면서 무한 반복(뮤트 시켜야 자동 플레이) -->
+            <!-- <video autoplay muted loop>
+                    <source src="video/main_video3.mp4" type="video/mp4">
+                </video> -->
+            <!-- </div> -->
+
+            <!-- 캐로셀 -->
+            <div id="slideWrap">
+                <!-- slide background image -->
+                <ul class="slider">
+                    <li class="bg1">
+                        <div class="tit">
+                            <span>Business or Project.</span>
+                            어떻게 해야할지 고민이신가요?
+                        </div>
+                    </li>
+                    <li class="bg2">
+                        <div class="tit">
+                            <span>Plan, creative, marketing.</span>
+                            당신의 비즈니스를 함께 고민하고 연구합니다.
+                        </div>
+
+                    </li>
+                    <li class="bg3">
+                        <div class="tit">
+                            <span>Don't Worry.</span>
+                            전문가에게 맡기고 스트레스를 줄여보세요.
+                        </div>
+                    </li>
+                    <li class="bg4">
+                        <div class="tit">
+                            <span>Everything is going to be fine.</span>
+                            인쓰리와 최상의 결과를 만들어 보세요.
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- pager -->
+                <div class="pager">
+                    <a class="active"><img src="images/d1.png" alt="페이저1"></a>
+                    <a><img src="images/d2.png" alt="페이저2"></a>
+                    <a><img src="images/d3.png" alt="페이저3"></a>
+                    <a><img src="images/d4.png" alt="페이저4"></a>
+                </div>
+
+                <!-- prev/next button -->
+                <div class="btn">
+                    <a href="#" id="prev"><i class="fa-solid fa-circle-arrow-left"></i></a>
+                    <a href="#" id="next"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                </div>
+            </div>
+
         </div>
-        <div class="section">SECTION 4</div>
-        <div class="section fp-auto-height" id="footer">footer</div>
+        <!-- 섹션2 -->
+        <div class="section" id="section2">
+            <div class="txt1 txt">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae laboriosam quis repellat reprehenderit reiciendis corporis temporibus facere consectetur quod numquam.
+            </div>
+            <div class="txt2 txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo perspiciatis laboriosam non facilis adipisci, expedita quasi nemo quas odit modi!
+            </div>
+            <a href="#" class="btn">자세히 보기</a>
+            <div id="product">
+                <div id="pic1"></div>
+                <div id="pic2"></div>
+                <div id="pic3"></div>
+            </div>
+        </div>
+        <div class="section" id="section3">SECTION 3</div>
+        <div class="section" id="section4">SECTION 4</div>
+        <div id="footer">footer</div>
     </div>
-    <!-- header -->
-    <header>
-        <h1 class="logo"><a href="#"><b>MC</b> Mega Coffee</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#menu">메뉴소개</a></li>
-                <li><a href="#event">이벤트</a></li>
-                <li><a href="#news">메가소식</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- section1 -->
-    <section id="main_img">
-        <img src="images/mango_main.jpg" alt="mango_main">
-        <h2 class="main_tit"><b>MC</b><span>Mega Coffee</span></h2>
-    </section>
-
-    <!-- section2 -->
-    <section id="menu" class="section">
-        <h2>메뉴소개</h2>
-        <ul>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best1.jpg" alt="best1">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best2.jpg" alt="best2">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best3.jpg" alt="best3">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best4.jpg" alt="best4">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best5.jpg" alt="best5">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best6.jpg" alt="best6">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best7.jpg" alt="best7">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="images/best8.jpg" alt="best8  ">
-            </li>
-        </ul>
-    </section>
-
-    <!-- section3 -->
-    <section id="event" class="section">
-        <h2>이벤트</h2>
-        <p>메가MGC커피는, 커피 및 음료전문점으로 다양한 음료와 100% 아라비카 원두의 진한 커피를 맛 보실수 있습니다. 더 크고 더 맛있다! 빅사이즈에 우수한 품질의 커피&음료를 합리적인 가격으로 제공하여 부담없이 여유롭게 다양하고 착한 음료를 제공합니다.
-        </p>
-        <ul>
-            <li>
-                <img src="images/sale_img1.jpg" alt="sale_img1">
-                <div>
-                    <h3>4월 메가MGC커피X 하나 원큐페이 이벤트</h3>
-                    <p>2023.04.01 ~ 04.30</p>
-                    <p>기본 24oz(680ml)의 많은 양의 빅사이즈 커피</p>
-                </div>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <img src="images/sale_img2.jpg" alt="sale_img2">
-                <div>
-                    <h3>Jane Doe</h3>
-                    <p>Architect</p>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                </div>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <img src="images/sale_img3.jpg" alt="sale_img3">
-                <div>
-                    <h3>Mike Ross</h3>
-                    <p>Architect</p>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.Phasellus eget enim eu lectus faucibus vestibulum. </p>
-                </div>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <img src="images/sale_img4.jpg" alt="sale_img4">
-                <div>
-                    <h3>Dan Star</h3>
-                    <p>Architect</p>
-                    <p>Phasellus eget enim eu lectus faucibus vestibulum. </p>
-                </div>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </section>
-
-    <!-- section4 -->
-    <section id="news" class="section">
-        <h2>메가소식</h2>
-        <p>Lets get in touch and talk about your next project.</p>
-        <form action="message.php" method="post">
-            <input type="text" name="user_name" placeholder="Name">
-            <input type="email" name="user_email" placeholder="Email">
-            <input type="text" name="user_subject" placeholder="Subject">
-            <input type="text" name="user_comment" placeholder="Comment">
-            <button type="submit">SEND MESSAGE</button>
-        </form>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50709.26246331178!2d126.8891975785993!3d37.40570015107763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60d1d537d26d%3A0x14e072c1880e3689!2z66mU6rCATUdD7Luk7ZS8IOyViOyWkeykkeyVmeyLnOyepeygkA!5e0!3m2!1sko!2skr!4v1683704958300!5m2!1sko!2skr"></iframe>
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer>
-        <p><span>Copyright</span><span>&copy;</span> 2023 MC <span>Maga Coffee</span>. All rights reserved.</p>
-    </footer>
 </body>
+
 </html>
