@@ -16,6 +16,7 @@
 
 <body>
     <div id="fullpage">
+        <!-- 섹션1 -->
         <div class="section" id="section1">
             <header id="header">
                 <h1 class="logo"><a href="#"><b>MANGOPLATE</b><span>망고플레이트</span></a></h1>
@@ -55,7 +56,7 @@
                         </li>
                     </ul>
                 </nav>
-        
+
                 <!-- 로그인/회원가입 -->
                 <div class="member">
                     <a href="#">로그인</a>
@@ -63,22 +64,75 @@
                 </div>
             </header>
 
-           <!--  <div class="vid"> -->
-                <!-- 비디오는 자동 플레이되면서 무한 반복(뮤트 시켜야 자동 플레이) -->
-                <!-- <video autoplay muted loop>
+            <!--  <div class="vid"> -->
+            <!-- 비디오는 자동 플레이되면서 무한 반복(뮤트 시켜야 자동 플레이) -->
+            <!-- <video autoplay muted loop>
                     <source src="video/main_video3.mp4" type="video/mp4">
                 </video> -->
             <!-- </div> -->
 
             <!-- 캐로셀 -->
-            <ul class="slider">
-                <li><img src="images/kia1.png" alt="자연1"></li>
-                <li><img src="images/kia2.png" alt="자연2"></li>
-                <li><img src="images/kia3.jpg" alt="자연3"></li>
-                <li><img src="images/kia4.jpg" alt="자연4"></li>
-            </ul>
+            <div id="slideWrap">
+                <!-- slide background image -->
+                <ul class="slider">
+                    <li class="bg1">
+                        <div class="tit">
+                            <span>Business or Project.</span>
+                            어떻게 해야할지 고민이신가요?
+                        </div>
+                    </li>
+                    <li class="bg2">
+                        <div class="tit">
+                            <span>Plan, creative, marketing.</span>
+                            당신의 비즈니스를 함께 고민하고 연구합니다.
+                        </div>
+
+                    </li>
+                    <li class="bg3">
+                        <div class="tit">
+                            <span>Don't Worry.</span>
+                            전문가에게 맡기고 스트레스를 줄여보세요.
+                        </div>
+                    </li>
+                    <li class="bg4">
+                        <div class="tit">
+                            <span>Everything is going to be fine.</span>
+                            인쓰리와 최상의 결과를 만들어 보세요.
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- pager -->
+                <div class="pager">
+                    <a class="active"><img src="images/d1.png" alt="페이저1"></a>
+                    <a><img src="images/d2.png" alt="페이저2"></a>
+                    <a><img src="images/d3.png" alt="페이저3"></a>
+                    <a><img src="images/d4.png" alt="페이저4"></a>
+                </div>
+
+                <!-- prev/next button -->
+                <div class="btn">
+                    <a href="#" id="prev"><i class="fa-solid fa-circle-arrow-left"></i></a>
+                    <a href="#" id="next"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                </div>
+            </div>
+
         </div>
-        <div class="section" id="section2">SECTION 2</div>
+        <!-- 섹션2 -->
+        <div class="section" id="section2">
+            <div class="txt1 txt">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae laboriosam quis repellat reprehenderit reiciendis corporis temporibus facere consectetur quod numquam.
+            </div>
+            <div class="txt2 txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo perspiciatis laboriosam non facilis adipisci, expedita quasi nemo quas odit modi!
+            </div>
+            <a href="#" class="btn">자세히 보기</a>
+            <div id="product">
+                <div id="pic1"></div>
+                <div id="pic2"></div>
+                <div id="pic3"></div>
+            </div>
+        </div>
         <div class="section" id="section3">SECTION 3</div>
         <div class="section" id="section4">SECTION 4</div>
         <div id="footer">footer</div>
