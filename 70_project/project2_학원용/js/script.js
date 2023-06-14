@@ -114,15 +114,29 @@ $(function () {
             // css(속성, 값)
             // css({속성, 값, 속성: 값})
             btn.css({ opacity: 1 });
-            txt1.css({ left: 360 + 'px'});
-            txt2.css({ left: 360 + 'px'});
+            txt1.css({ left: 360 + 'px' });
+            txt2.css({ left: 360 + 'px' });
         } else {
             btn.css({ opacity: 0 });
-            txt1.css({ left: -400 + 'px'});
-            txt2.css({ left: -400 + 'px'});
+            txt1.css({ left: -400 + 'px' });
+            txt2.css({ left: -400 + 'px' });
         }
     });
 
+    // 섹션3: 탭
+    const tabBtn = $('#section3 .thumb li'),
+        bigImg = $('#section3 .big li'),
+        txt = $('#section3 .txt li');
+
+    tabBtn.click(function () {
+        let idx = $(this).index();
+        tabBtn.removeClass('active');
+        bigImg.removeClass('active');
+        txt.removeClass('active');
+        $(this).addClass('active');
+        bigImg.eq(idx).addClass('active');
+        txt.eq(idx).addClass('active');
+    });
     // 풀페이지 레이아웃
     $('.section').mousewheel(function (e, delta) {
         let prev;
