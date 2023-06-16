@@ -32,24 +32,34 @@
         body {
             font-family: 'Noto Sans KR', sans-serif;
             font-size: 1.5rem;
+            height: 2000px;
         }
 
         /* 헤더 */
         #header {
+            position: fixed;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 60px;
             background: rgb(255, 165, 0);
+            /* 
+                transition-property: all;
+                transition-duration: .5s;
+                transition-time-function: ease;
+                transition-delay: .5s;
+            */
+            transition: .5s, .5s;
         }
-        
+
         /* 로고 */
         .logo {
             text-align: center;
             letter-spacing: .5rem;
             line-height: 1;
         }
-        
+
         .logo b {
             font-size: 2.2rem;
             font-weight: normal;
@@ -90,7 +100,7 @@
             /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
             text-align: center;
         }
-        
+
         .main>li>a {
             position: relative;
             display: inline-block;
@@ -116,6 +126,7 @@
             border-bottom: 2px solid #333;
             color: #ccc;
         }
+
         .main>li>a:hover:after {
             transform: scaleX(1);
         }
@@ -194,6 +205,20 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"> </script>
     <script>
+        // 스크롤 시 헤더의 배경색 바꾸기
+        const headerBg = $('#header');
+
+        $(window).scroll(function () {
+            // 스크롤바를 스크롤한 양을 st에 저장
+            let st = $(this).scrollTop();
+            let stVal = 600;
+
+            if (st <= 0) {
+                headerBg.css({ background: 'transparent' })
+            } else {
+                headerBg.css({ background: '#888' })
+            }
+        });
         // 내비게이션바
         $('.main > li > a').mouseenter(function (e) {
             // a태그 기본 이벤트 제거
@@ -205,6 +230,8 @@
             $('.sub').stop().slideUp(400);
             $('.nav_bg').stop().animate({ height: 0 }, 400);
         });
+
+
     </script>
 </body>
 

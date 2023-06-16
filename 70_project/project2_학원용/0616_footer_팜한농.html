@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 10px;
+        }
+        body {
+            font-size: 1.5rem;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        #footer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+        }
+        .fl {
+            text-align: center;
+            margin: 0 50px 10px 50px;
+        }
+        .leftCont > div:not(div:first-of-type) {
+            margin-top: 20px;
+        }
+        .bnb ul li:not(li:first-of-type)::before {
+            content: '|';
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+        .bnb ul {
+            display: flex;
+        }
+        .bnb ul li a {
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+        .leftCont .addr p:last-of-type {
+            margin-top: 5px;
+        }
+        /* 패밀리사이트 */
+        .fs {
+            position: relative;
+            top: 50px;
+            left: 100px;
+            /* top: 100px; */
+            width: 240px;
+            height: 50px;
+        }
+
+        .fs .fsBtn {
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            width: 240px;
+            background: #494949;
+            border: 1px solid #676767;
+            color: #b9b9b9;
+        }
+
+        .fs i {
+            margin-left: 40px;
+        }
+
+        .fs ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            width: 100%;
+            background: #494949;
+            border: 1px solid #676767;
+            border-bottom: none;
+            padding: 15px 40px;
+        }
+
+        .fs ul a {
+            color: #b9b9b9;
+            line-height: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="footer">
+        <h2 class="fl"><a href="#">Mango<br>Plate</a></h2>
+        <div class="leftCont">
+            <div class="bnb">
+                <ul>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">커뮤니티 가이드라인</a></li>
+                    <li><a href="#">비회원 이용자 이용정책</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                </ul>
+            </div>
+            <div class="addr">
+                <p>서울특별시 강남구 봉은사로 479, 479타워 11층</p>
+                <p>대표이사: 정명훈 | 사업자 등록번호: 742-86-00224 | 고객센터: 02-565-5988</p>
+            </div>
+            <div class="copy">COPYRIGHT 2023 MangoPlate Co., Ltd. All rights reserved.</div>
+        </div>
+        <div class="fs">
+            <a href="#" class="fsBtn"><span>관련 사이트 열기</span><i class="fa-solid fa-plus"></i></a>
+            <ul>
+                <li><a href="https://blog.naver.com/ekddusekddus">블로그</a></li>
+                <li><a href="https://www.facebook.com/mega.mgc.coffee.official">페이스북</a></li>
+                <li><a href="https://www.instagram.com/mega.mgc.coffee_official/">인스타그램</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const fs = $('.fs'),
+            fsLst = fs.find('ul'),
+            fsIcon = fs.find('i'),
+            fsTxt = fs.find('span'),
+            fsBtn = fs.find('.fsBtn');
+            let state = 0;
+        // .fsBtn을 클릭하면 함수 실행
+        fsBtn.click(function () {
+            fsLst.slideToggle();
+
+            /* 삼각형 모양 바꾸기 */
+            if (state == 0) {
+                // $('선택자').attr(속성, 값); ~ 하나의 속성만
+                // $('선택자').attr({HTML속성: 값, 속성: 값}); ~ 여러 개의 속성
+                // $('선택자').css({CSS속성: 값, 속성: 값}); ~ 여러 개의 속성
+                fsTxt.html('관련 사이트 닫기');
+                fsIcon.attr({ class: 'fa-solid fa-minus' });
+                state = 1;
+            } else {
+                fsTxt.text('관련 사이트 열기');
+                fsIcon.attr({ class: 'fa-solid fa-plus' });
+                state = 0;
+            }
+        });
+    </script>
+</body>
+</html>

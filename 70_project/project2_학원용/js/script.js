@@ -107,7 +107,6 @@ $(function () {
         // 스크롤바를 스크롤한 양을 st에 지정
         let st = $(this).scrollTop();
         let stValue = 600;
-        console.log(st);
 
 
         if (st >= stValue) {
@@ -155,7 +154,7 @@ $(function () {
     let cnt = 0, idx, timer;
 
     // fade에 마우스를 올리면
-    fade.mouseenter(function(){
+    fade.mouseenter(function () {
         // 마우스를 올린 fade의 부모의 색인 번호를 idx 저장
         // 왼쪽은 0, 오른쪽은 1
         idx = $(this).parent().index();
@@ -163,7 +162,7 @@ $(function () {
         timer = setInterval(fadeFn, 2000);
     });
     // fade 위에서 마우스가 벗어나면 함수 실행
-    fade.mouseleave(function(){
+    fade.mouseleave(function () {
         // setInterval 정지
         clearInterval(timer);
     });
@@ -178,7 +177,34 @@ $(function () {
         // cnt: 0, 1, 2
         inner.eq(idx).find('li').eq(cnt).fadeIn(1000).siblings().fadeOut(1000);
     }
-    
+
+    // 패밀리 사이트
+    const fs = $('.fs'),
+        fsLst = fs.find('ul'),
+        fsIcon = fs.find('i'),
+        fsTxt = fs.find('span'),
+        fsBtn = fs.find('.fsBtn');
+    let state = 0;
+    // .fsBtn을 클릭하면 함수 실행
+    fsBtn.click(function (e) {
+        e.preventDefault();
+        fsLst.slideToggle();
+
+        /* 삼각형 모양 바꾸기 */
+        if (state == 0) {
+            // $('선택자').attr(속성, 값); ~ 하나의 속성만
+            // $('선택자').attr({HTML속성: 값, 속성: 값}); ~ 여러 개의 속성
+            // $('선택자').css({CSS속성: 값, 속성: 값}); ~ 여러 개의 속성
+            fsTxt.html('관련 사이트 닫기');
+            fsIcon.attr({ class: 'fa-solid fa-minus' });
+            state = 1;
+        } else {
+            fsTxt.text('관련 사이트 열기');
+            fsIcon.attr({ class: 'fa-solid fa-plus' });
+            state = 0;
+        }
+    });
+
     // 풀페이지 레이아웃
     $('.section').mousewheel(function (e, delta) {
         let prev;
@@ -190,6 +216,18 @@ $(function () {
             let next = $(this).next().offset().top;
             // console.log(next);
             $('html').stop().animate({ scrollTop: next }, 100, 'easeOutExpo');
+            // 937
+            
+        }
+    });
+    $(window).scroll(function() {
+        let sTop = $(this).scrollTop();
+        console.log(sTop);
+        if (sTop >= 937) {
+            console.log(sTop);
+            $('#header').css({background: 'rgb(255, 165, 0)', transition: '.5s'});
+        } else{
+            $('#header').css({background: 'transparent', transition: '.5s'});
         }
     });
 });

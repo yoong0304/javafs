@@ -13,6 +13,9 @@ body {
 #fullpage .section {
     height: 100vh;
 }
+#fullpage #footer {
+    height: auto;
+}
 
 
 #section1 {
@@ -33,5 +36,4 @@ body {
 
 #footer {
     background: #111;
-    padding: 100px 0;
 }
