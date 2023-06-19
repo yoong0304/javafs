@@ -33,8 +33,8 @@ header i {
     height: 930px;
     background: url(../images/parallax1.png) no-repeat 50% 50%/cover fixed;
 }
-/* 요소를 부모 안에 정가운데 배치 */
-.logo {
+/* 디지털 시계 */
+#home .clock {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -45,8 +45,7 @@ header i {
 
 /* section2~4 공통 */
 .container {
-    width: 960px;
-    margin: 0 auto;
+
     padding-bottom: 81px;
 }
 section h2 {
@@ -70,18 +69,11 @@ section h2 + p {
 }
 
 /* section2 */
-.profile {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 .profile p:first-of-type {
-    flex: 100%;
     margin-bottom: 54px;
 }
 
 .profile div {
-    flex: 0 0 48%;
     text-align: center;
 }
 .photo img {
@@ -90,46 +82,35 @@ section h2 + p {
 .photo b {
     margin-left: 8px;
 }
-.profile p:last-of-type {
-    flex: 0 0 48%;
-}
-.photo {
-    width: 425px;
-    /* height: 290px; */
-}
+
+
 /* 섹션2 - skill */
 #about h3 {
     margin: 54px 0;
     text-align: center;
 }
-.progress .lst > span {
-    display: inline-block;
+/* 프로그래스바 */
+#skill .progress {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 16px;
+    height: 30px;
+}
 
-    margin: 16px;
-}
-.progress .lst div {
-    background: #eee;
-}
-.progress .lst div span{
+#skill .progress div {
+    width: 0%;
+    background-color: #04AA6D;
     text-align: center;
-    display: block;
-    height: 34px;
-    background: #555;
+    line-height: 30px;
+    color: white;
 }
 
-.progress .lst:nth-of-type(1) div span{
-    width: 90%;
-}
-.progress .lst:nth-of-type(2) div span{
-    width: 85%;
-}
-.progress .lst:nth-of-type(3) div span{
-    width: 75%;
-}
+/* 카운터 */
 
 #counter ul {
+    padding: 36px 0;
     align-items: center;
-    height: 132px;
+    /* height: 132px; */
     background: #616161;
     color: #fff;
     text-align: center;
@@ -139,30 +120,20 @@ section h2 + p {
 }
 
 /* section3 */
-
-
 #portfolio .parallax {
     background-image: url(../images/parallax2.jpg);
 }
 
-/* 
-    max-width: 960px
-    column count: 12
-    1 column width: 69px
-    gutter: 12px 
-*/
-#portfolio ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+/* 포트폴리오 */
 #portfolio li {
-    width: 231px;
-    height: 162px;
     margin-bottom: 12px;
     overflow: hidden;
+}
+
+#portfolio li img {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
+
 #portfolio .moreBtn {
     margin-top: 64px; /* 인라인요소이면 안먹힘 */
     text-align: center;
@@ -176,11 +147,8 @@ section h2 + p {
 #contact .parallax {
     background-image: url(../images/parallax3.jpg);
 }
-#contact .container {
-    display: flex;
-}
+
 #map {
-    flex: 0 0 330px;
     height: 160px;
     margin-right: 30px;
     border-radius: 5px;
@@ -192,19 +160,19 @@ section h2 + p {
 #contact address + p {
     margin: 16px 0;
 }
-#contact form {
-    text-align: right;
-}
+
+/* 폼 */
+
 #contact [name] {
-    width: 292px;
+
     height: 44px;
     padding-left: 8px;
 }
 #contact [name="user_name"] {
-    margin-right: 12px;
+    margin-right: 11px;
 }
 #contact [name $= "message"] {
-    width: 600px;
+    /* width: 600px; */
     margin: 16px 0;
 }
 #contact button {    
@@ -217,10 +185,6 @@ section h2 + p {
 
 /* footer */
 footer {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     padding: 64px 0 81px;
     text-align: center;
     background: #555;
