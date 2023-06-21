@@ -31,7 +31,7 @@ header i {
 #home {
     position: relative;
     height: 930px;
-    background: url(../images/parallax1.png) no-repeat 50% 50%/cover fixed;
+    background: url(../images/myImg3.jpg) no-repeat 50% 70%/cover fixed;
 }
 /* 디지털 시계 */
 #home .clock {
@@ -79,6 +79,9 @@ section h2 + p {
 .photo img {
     margin-top: 54px;
 }
+/* .photo {
+    background: url(../images/myImg7.jpg) no-repeat 50% 50%/cover;
+} */
 .photo b {
     margin-left: 8px;
 }
@@ -121,7 +124,7 @@ section h2 + p {
 
 /* section3 */
 #portfolio .parallax {
-    background-image: url(../images/parallax2.jpg);
+    background-image: url(../images/myImg4.jpg);
 }
 
 /* 포트폴리오 */
@@ -145,7 +148,7 @@ section h2 + p {
 }
 /* section4 */
 #contact .parallax {
-    background-image: url(../images/parallax3.jpg);
+    background-image: url(../images/myImg1.jpg);
 }
 
 #map {

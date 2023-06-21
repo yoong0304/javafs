@@ -2,11 +2,11 @@ $(function(){
     // 프로그래스바
     let progressState = 0
     $(window).scroll(function(){
-        if ($(this).scrollTop() >= 150) {
+        if ($(this).scrollTop() >= 1300) {
             if (progressState === 0) {
                 pgbar(90,0);
-                pgbar(85,1);
-                pgbar(75,2);
+                pgbar(80,1);
+                pgbar(65,2);
                 progressState = 1;
             } else {
                 return;
@@ -41,8 +41,9 @@ $(function(){
 
         let countState = 0;
         $(window).scroll(function () {
+            // console.log($(window).scrollTop()); // 현재 스크롤의 탑값 확인
             // 윈도우 스크롤이 150이상이면 
-            if ($(this).scrollTop() >= 2150) {
+            if ($(this).scrollTop() >= 1500) {
                 if (countState === 0) {
                     move(q,0);
                     move(w,1);
